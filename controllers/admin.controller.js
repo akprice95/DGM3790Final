@@ -73,7 +73,7 @@ export const postEditStats = (req, res, next) => {
 
 // delete
 
-export const postDeleteGamer = (req, res, next) => {
+export const postDeleteProduct = (req, res, next) => {
   const playId = req.body.playerId;
   Product.findByIdAndRemove(playId)
     .then(() => {
