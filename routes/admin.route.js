@@ -7,7 +7,7 @@ import {
   getAllStats,
   getStatsById,
   postEditStats,
-  postDeleteProduct
+  postDeleteGamer
 } from "../controllers/admin.controller";
 
 adminRouter.post("/add-gamer", postAddGamer);
@@ -18,4 +18,4 @@ adminRouter.get("/Stats", getStatsById);
 
 adminRouter.put("/edit-Stats", postEditStats);
 
-adminRouter.post("/delete-product", postDeleteProduct);
+adminRouter.post("/delete-gamer", postDeleteGamer);
