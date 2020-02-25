@@ -60,7 +60,7 @@ export const postEditStats = (req, res, next) => {
       console.log(updatedGamerTag);
       console.log(updatedPlatform);
       console.log(updatedmatchesPlayed);
-      console.log(updatedKD);
+      console.log(upda);
 
       return product.save();
     })
