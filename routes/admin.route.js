@@ -3,19 +3,19 @@ import { Router } from "express";
 export const adminRouter = Router();
 
 import {
-  postAddProduct,
+  postAddGamer,
   getAllProducts,
   getProductById,
   postEditProduct,
   postDeleteProduct
 } from "../controllers/admin.controller";
 
-adminRouter.post("/add-product", postAddProduct);
+adminRouter.post("/add-gamer", postAddGamer);
 
 adminRouter.get("/getAllProducts", getAllProducts);
 
 adminRouter.get("/product", getProductById);
 
-adminRouter.get("/edit-product", postEditProduct);
+adminRouter.put("/edit-product", postEditProduct);
 
 adminRouter.post("/delete-product", postDeleteProduct);

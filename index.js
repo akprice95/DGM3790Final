@@ -12,6 +12,8 @@ app.use(
   })
 );
 
+app.use(bodyParser.json());
+
 app.use(express.static("public"));
 
 app.use("/admin", adminRouter);

@@ -3,20 +3,20 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 const productSchema = new Schema({
-  title: {
+  platform: {
     type: String,
     required: true
   },
-  price: {
+  gamerTag: {
+    type: String,
+    required: true
+  },
+  matchesPlayed: {
     type: Number,
     required: true
   },
-  description: {
-    type: String,
-    required: true
-  },
-  imageUrl: {
-    type: String,
+  KD: {
+    type: Number,
     required: true
   }
 });
