@@ -32,7 +32,7 @@ if (port == null || port == "") {
 
 mongoose
   .connect(
-    `mongodb+srv://akprice95:kamana24@cluster0-gpmr6.mongodb.net/products?retryWrites=true&w=majority`
+    `mongodb+srv://akprice95:Kamana24@cluster0-gpmr6.mongodb.net/products?retryWrites=true&w=majority`
   )
   .then(result => {
     app.listen(port, () => {
