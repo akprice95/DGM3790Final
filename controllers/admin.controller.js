@@ -21,7 +21,7 @@ export const postAddGamer = (req, res, next) => {
 };
 
 // read all
-export const getAllProducts = (req, res, next) => {
+export const getAllStats = (req, res, next) => {
   Product.find()
     .then(products => {
       res.json(products);
@@ -30,7 +30,7 @@ export const getAllProducts = (req, res, next) => {
 };
 
 // read one
-export const getProductById = (req, res, next) => {
+export const getStatsById = (req, res, next) => {
   const playId = req.body.playerId;
   console.log(playId);
   Product.findById(playId)
@@ -44,24 +44,29 @@ export const getProductById = (req, res, next) => {
 };
 
 // update
-export const postEditProduct = (req, res, next) => {
+export const postEditStats = (req, res, next) => {
   const playId = req.body.playerId;
   const updatedPlatform = req.body.platform;
   const updatedGamerTag = req.body.gamerTag;
-  const updatedDesc = req.body.description;
-  const updatedImageUrl = req.body.imageUrl;
+  const updatedmatchesPlayed = req.body.matchesPlayed;
+  const updatedKD = req.body.KD;
 
   Product.findById(playId)
     .then(product => {
       product.platform = updatedPlatform;
       product.gamerTag = updatedGamerTag;
-      product.description = updatedDesc;
-      product.imageUrl = updatedImageUrl;
+      product.matchesPlayed = updatedmatchesPlayed;
+      product.KD = updatedKD;
+      console.log(updatedGamerTag);
+      console.log(updatedPlatform);
+      console.log(updatedmatchesPlayed);
+      console.log(updatedKD);
+
       return product.save();
     })
     .then(result => {
       console.log("Updated product");
-      res.redirect("/admin/getAllProducts");
+      res.redirect("/admin/getAllStats");
     })
     .catch(err => console.log(err));
 };
@@ -73,7 +78,7 @@ export const postDeleteProduct = (req, res, next) => {
   Product.findByIdAndRemove(playId)
     .then(() => {
       console.log("Deleted the product");
-      res.redirect("/admin/getAllProducts");
+      res.redirect("/admin/getAllStats");
     })
     .catch(err => console.log(err));
 };

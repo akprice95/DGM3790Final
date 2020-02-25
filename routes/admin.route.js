@@ -4,18 +4,18 @@ export const adminRouter = Router();
 
 import {
   postAddGamer,
-  getAllProducts,
-  getProductById,
-  postEditProduct,
+  getAllStats,
+  getStatsById,
+  postEditStats,
   postDeleteProduct
 } from "../controllers/admin.controller";
 
 adminRouter.post("/add-gamer", postAddGamer);
 
-adminRouter.get("/getAllProducts", getAllProducts);
+adminRouter.get("/getAllStats", getAllStats);
 
-adminRouter.get("/product", getProductById);
+adminRouter.get("/Stats", getStatsById);
 
-adminRouter.put("/edit-product", postEditProduct);
+adminRouter.put("/edit-Stats", postEditStats);
 
 adminRouter.post("/delete-product", postDeleteProduct);
