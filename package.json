@@ -1,26 +1,27 @@
 {
-  "name": "nodepractice4790",
-  "version": "0.0.1",
-  "description": "This is where I practice Node stuff",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon -r esm index.js",
-    "callback": "nodemon -r esm callbacks.js"
-  },
-  "author": "Thor Anderson",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^0.19.1",
-    "body-parser": "^1.19.0",
-    "esm": "^3.2.25",
-    "express": "^4.17.1",
-    "express-validator": "^6.3.1",
-    "mongodb": "^3.5.2",
-    "mongoose": "^5.9.2",
-    "nodemon": "^2.0.2"
-  },
-  "devDependencies": {
-    "eslint": "^6.8.0"
-  }
+	"name": "nodepractice4790",
+	"version": "0.0.1",
+	"description": "This is where I practice Node stuff",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "nodemon -r esm index.js",
+		"callback": "nodemon -r esm callbacks.js"
+	},
+	"author": "Aaron Price",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^0.19.1",
+		"body-parser": "^1.19.0",
+		"cors": "^2.8.5",
+		"esm": "^3.2.25",
+		"express": "^4.17.1",
+		"express-validator": "^6.3.1",
+		"mongodb": "^3.5.2",
+		"mongoose": "^5.9.2",
+		"nodemon": "^2.0.2"
+	},
+	"devDependencies": {
+		"eslint": "^6.8.0"
+	}
 }
